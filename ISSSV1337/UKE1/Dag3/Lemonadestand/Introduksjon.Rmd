@@ -1,0 +1,31 @@
+---
+title: "Introduksjon til R"
+author: "Nikolai"
+date: '2022-06-30'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(datasets)
+head(iris)
+```
+
+?plot #Gir hjelp om funksjonen
+
+plot(iris$Species)
+plot(iris$Petal.Length)
+plot(iris$Species, iris$Petal.Width)
+plot(iris$Petal.Length, iri$Petal.Width)
+
+head(mtcars)
+
+cylinders <- table(mtcars$cyl)
+barplot(cylinders)
+plot(cylinders)
+
+?select
+
