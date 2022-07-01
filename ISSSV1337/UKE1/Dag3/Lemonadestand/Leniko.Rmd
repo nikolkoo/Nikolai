@@ -1,0 +1,47 @@
+---
+title: "Leniko"
+author: "Nikolai"
+date: '2022-06-30'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# LENIKO
+Hi, my name is Nikolai 
+I am the founder of LENIKO - the *best* lemonade stand in the world!
+This year I hope to travel to Barcelona with my fellow students. The estimated price of that trip is around **10000kr**.
+
+
+# Lemonade sales
+```{r}
+reiseKostnad <- 4900
+prices <- c(30,40,10,20)
+salg <- c(30*3 + 1*40 + 0*20)
+names <- c("super", "fun", "easy", "smooth")
+library(tidyverse)
+dataset <- tibble(Names = names, Prices = prices)
+#My favorite lemonade is super :)
+matrix <- data.matrix(dataset)
+customers <- c(49, 21, 59, 44)
+dataset <- mutate(dataset, customers)
+verdi <- 0
+for (int in 1:4) {
+  verdi <- verdi + prices[int]*customers[int]
+}
+print(verdi)
+differanse <- reiseKostnad - verdi
+antallLimonader <- differanse/mean(prices)
+print(antallLimonader)
+```
+
+#Hvordan benytte variabler i tekst???
+The travel costs 4900 nok. *To reach my goal of travel i would have to sell 45 additional lemonades*
+
+```{r, out.width = "80%", fig.align = "center"} 
+knitr::include_graphics("C:/Users/Nikolai/Documents/ISSSV1337/UKE1/Nikolai/Lemonadestand/index.jpg")
+
+```
+
